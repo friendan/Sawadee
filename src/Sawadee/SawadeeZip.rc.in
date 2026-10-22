@@ -1,0 +1,3 @@
+#include "resource.h"
+
+IDR_SAWADEE_SKIN ZIPRES "@SAWADEE_SKIN_ZIP_RC_PATH@"

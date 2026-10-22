@@ -1,0 +1,55 @@
+<html theme="chrome" caption="0,0,0,40" size-box="4,4,6,6">
+  <VBox name="root" window-resize="all">
+    <TitleBar name="titlebar" title="" height="40"
+        show-min="true" show-max="true" show-close="true" action="title" />
+    <VBox padding="16,16,16,16" gap="10" flexible="1">
+      <HBox height="36" gap="8" align-items="vcenter">
+        <Edit name="edt_text" flexible="1" height="36"
+            font-family="TH Sarabun New" font-size="20"
+            placeholder="输入文字后点增加" />
+        <Button name="btn_add" text="增加" kind="primary" width="72" height="36" />
+        <Button name="btn_paste" text="粘贴" kind="default" width="72" height="36" />
+      </HBox>
+      <HBox height="36" gap="8" align-items="vcenter">
+        <Combo name="cmb_font" width="240" height="32" drop-box-size="0,280" />
+        <Edit name="edt_font_size" width="64" height="32" text="100" type="number" maxlength="4"
+            tooltip="字号。相对导出尺寸，留空则自动铺满" />
+        <CheckBox name="chk_bold" text="粗体" width="72" height="32" />
+        <CheckBox name="chk_italic" text="斜体" width="72" height="32" />
+        <CheckBox name="chk_underline" text="下划线" width="80" height="32" />
+        <CheckBox name="chk_strike" text="删除线" width="80" height="32" />
+        <Spacer />
+      </HBox>
+      <HBox height="36" gap="8" align-items="vcenter">
+        <HBox name="color_row" height="36" gap="6" align-items="vcenter" />
+        <Label name="lbl_color" width="96" theme="secondary" />
+        <Spacer />
+      </HBox>
+      <ColorPalette name="palette" height="168" palette-height="128" bar-height="14"
+          visible="false" />
+      <HBox name="preview_row" flexible="1" gap="10">
+        <VBox name="text_list" width="56" overflow-y="auto" gap="6"
+            tooltip="点击序号选择文字，再点一次取消。选中后可在图片上拖动" />
+        <VBox name="preview_plate" flexible="1" menu="true" padding="16,16,16,16"
+            background-color="#F2F2F2FF" border="1px solid"
+            border-color="var(--color-border)" border-radius="8">
+          <Label name="preview" flexible="1" font-family="TH Sarabun New" font-size="120"
+              text-align="center" valign="vcenter" word-break="normal" mouse="false" />
+        </VBox>
+        <VBox name="bg_list" width="112" overflow-y="auto" gap="8" />
+      </HBox>
+      <HBox height="32" gap="8" align-items="vcenter">
+        <Segmented name="seg_format" options="PNG:png|JPG:jpg|BMP:bmp" selected="png"
+            width="220" height="32" />
+        <Edit name="edt_w" width="72" height="32" text="1920" type="number" maxlength="4" />
+        <Label text="×" width="16" height="32" text-align="center" />
+        <Edit name="edt_h" width="72" height="32" text="1080" type="number" maxlength="4" />
+        <Label name="lbl_fmt_hint" theme="secondary" />
+        <Spacer />
+        <Button name="btn_export" text="导出图片" kind="primary" width="96" height="32" />
+        <Button name="btn_export_ico" text="导出图标" kind="default" width="96" height="32"
+            tooltip="同一个 ico 内含 16、24、32、48、64、128、256" />
+      </HBox>
+    </VBox>
+  </VBox>
+</html>
